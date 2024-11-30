@@ -37,6 +37,11 @@ func TestGetAppleSize(t *testing.T) {
 	}
 
 	mocker.AssertExpectations(t)
+	//mock.Mock 还有一些很实用的常用断言，如：
+	//AssertCalled 断言被调用
+	//AssertNotCalled 断言没被调用
+	//AssertExpectations 断言 On 和 Return 设置的参数和返回值的方法，有被调用
+	//AssertNumberOfCalls 断言调用次数
 	/*
 	   // 创建mock 实现
 	   mocker := applemock.NewApple(t)
