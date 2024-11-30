@@ -4,6 +4,10 @@ type Size struct {
 	app Apple
 }
 
-func (s Size) GetSize() {
-	s.app.AppleSize()
+func (s *Size) GetSize(size int) string {
+	a := size
+	if s.app.AppleSize(a) == a {
+		return "aaaaa"
+	}
+	return "bbbbb"
 }

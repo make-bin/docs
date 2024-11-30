@@ -9,17 +9,17 @@ type Apple struct {
 	mock.Mock
 }
 
-// AppleSize provides a mock function with given fields:
-func (_m *Apple) AppleSize() int {
-	ret := _m.Called()
+// AppleSize provides a mock function with given fields: size
+func (_m *Apple) AppleSize(size int) int {
+	ret := _m.Called(size)
 
 	if len(ret) == 0 {
 		panic("no return value specified for AppleSize")
 	}
 
 	var r0 int
-	if rf, ok := ret.Get(0).(func() int); ok {
-		r0 = rf()
+	if rf, ok := ret.Get(0).(func(int) int); ok {
+		r0 = rf(size)
 	} else {
 		r0 = ret.Get(0).(int)
 	}

@@ -1,14 +1,14 @@
 package mock
 
 type Apple interface {
-	AppleSize() int
+	AppleSize(size int) int
 }
 
 type apple struct {
 }
 
-func (a *apple) AppleSize() int {
-	return 10
+func (a *apple) AppleSize(size int) int {
+	return size
 }
 
 func NewApple() Apple {
